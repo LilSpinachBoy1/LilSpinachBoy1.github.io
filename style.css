@@ -1,0 +1,45 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/gradient-mint-background_23-2150282268.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704931200&semt=ais");
+    background-size: cover;
+    font-family: 'Roberto Mono', monospace;
+}
+
+header {
+    text-align: center;
+    background-color: #05cdd4;
+    color: #01292a;
+
+    border-radius: 10px;
+}
+
+#styleDiv {
+    background-color: white;
+    width: 65%;
+
+    border-radius: 30px;
+}
+
+#textDiv {
+    padding: 0.3%;
+    margin-left: 5%;
+}
+
+#mePhoto1 {
+    height: 600px;
+    border-radius: 30px;
+}
+
+.sect1 {
+    display: flex;
+}
+
+.sect1C:first-child {
+    flex: 3;
+}
+
+.sect1C {
+    margin-right: 3%;
+    margin-left: 3%;
+    flex: 1;
+}
+
