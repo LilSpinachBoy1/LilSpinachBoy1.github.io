@@ -3,7 +3,9 @@ const form = document.getElementById("login_form");
 // Advin if you're seeing this I am not happy with you
 const users = [["Sam", "admin1"], ["Holly", "admin2"], ["Advin", "poopyface12345698"], ["Reese", "ILoveCSS"]];
 
-function validate() {
+function validate(event) {
+    event.preventDefault(); // Prevent default form submission
+
     const username = form.username.value;
     const password = form.password.value;
 
