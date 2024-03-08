@@ -11,13 +11,13 @@ function validate() {
     let valid = false;
     for (let x = 0; x < users.length; x++) {
         if (users[x][0] === username && users[x][1] === password) {
-            alert("enter!");
+            window.location.href = "HOMEPAGE/home.html";
             valid = true;
             break;
         }
     }
 
-    if (! valid) {alert("halt!");}
+    if (! valid) {alert("Invalid Credentials!");}
 }
 
 btn.addEventListener("click", validate);
