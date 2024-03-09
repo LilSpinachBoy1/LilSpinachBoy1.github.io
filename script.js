@@ -1,7 +1,7 @@
 const form = document.getElementById("login_form");
 
 // Advin if you're seeing this I am not happy with you
-const users = [["Sam", "admin1"], ["Holly", "admin2"], ["Advin", "poopyface12345698"], ["Reese", "ILoveCSS"], ["SpecialDaddy", "yourmum123"]];
+const users = [["Sam", "admin1"], ["Holly", "cheeseLover123"], ["Advin", "poopyface12345698"], ["Reese", "ILoveCSS"], ["SpecialDaddy", "yourmum123"]];
 
 function validate(event) {
     event.preventDefault(); // Prevent default form submission
