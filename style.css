@@ -19,3 +19,27 @@ body {
     margin: 20%;
     text-align: center;
 }
+
+.basic_header {
+    background-color: aqua;
+    text-align: center;
+    padding: 1%;
+    margin-inline: 10%;
+    margin-bottom: 5%;
+    border-radius: 30px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 10px;
+}
+
+.grid_box-def {
+    display: inline-grid;
+
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.5%;
+}
