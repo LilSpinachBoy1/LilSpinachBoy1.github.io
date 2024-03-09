@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <title>Rock, paper, scissors!</title>
   <script src="rpsJS.js" defer></script>
+<link rel="stylesheet" href="rpsCSS.css">
 </head>
 <body>
-    <h2>Computer Choice: <span id="cpu_pick_span"></span></h2>
-    <h2>Player Choice: <span id="user_pick_span"></span></h2>
-    <h2>Result: <span id="result_span"></span></h2>
-
-    <button id="Rock">Rock</button>
-    <button id="Paper">Paper</button>
-    <button id="Scissors">Scissors</button>
+    <div class="def-grid">
+        <h2>Computer Choice: <span id="cpu_pick_span"></span></h2>
+        <h2>Player Choice: <span id="user_pick_span"></span></h2>
+        <h2>Result: <span id="result_span"></span></h2>
+    </div>
+    <div class="def-grid">
+        <h2>Player score: <span id="player_score_span">0</span></h2>
+        <h2>Computer score: <span id="cpu_score_span">0</span></h2>
+    </div>
+    <div class="def-grid">
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissors">Scissors</button>
+    </div>
 </body>
 </html>

@@ -2,9 +2,13 @@ const cpu_choice_text = document.getElementById("cpu_pick_span")
 const user_choice_text = document.getElementById("user_pick_span")
 const result_display = document.getElementById("result_span")
 const possible_choices = document.querySelectorAll("button")  // Like a list of all buttons kinda
+const user_score_text = document.getElementById("player_score_span")
+const cpu_score_text = document.getElementById("cpu_score_span")
 let user_choice
 let computer_choice
 let result
+let user_score = 0
+let cpu_score = 0
 
 // For every item in the possible_choices querySelector, add an event listener which passes the event "e" in and runs the function
 possible_choices.forEach(btn => btn.addEventListener("click", (e) => {
@@ -45,20 +49,22 @@ function getResult() {
     else {
         switch (computer_choice) {
             case "Rock":
-                if (user_choice === "Paper") {result = "You win!"}
-                else if (user_choice === "Scissors") {result = "You lost :/"}
+                if (user_choice === "Paper") {result = "You win!"; user_score++}
+                else if (user_choice === "Scissors") {result = "You lost :/"; cpu_score++}
                 break
             case "Paper":
-                if (user_choice === "Rock") {result = "You lost :/"}
-                else if (user_choice === "Scissors") {result = "You win!"}
+                if (user_choice === "Rock") {result = "You lost :/"; cpu_score++}
+                else if (user_choice === "Scissors") {result = "You win!"; user_score++}
                 break
             case "Scissors":
-                if (user_choice === "Rock") {result = "You win!"}
-                else if (user_choice === "Paper") {result = "You lost :/"}
+                if (user_choice === "Rock") {result = "You win!"; user_score++}
+                else if (user_choice === "Paper") {result = "You lost :/"; cpu_score++}
                 break
         }
     }
 
     // Present result
     result_display.innerHTML = result
+    user_score_text.innerHTML = String(user_score)
+    cpu_score_text.innerHTML = String(cpu_score)
 }
