@@ -20,3 +20,9 @@ function validate(event) {
 
     if (! valid) {alert("Invalid Credentials!");}
 }
+
+// Simple function to redirect to a given url or file location
+function redirect(location) {
+    console.log(`Attempting to redirect to: "${location}"`)
+    window.location.href = location
+}
