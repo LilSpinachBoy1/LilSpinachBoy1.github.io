@@ -1,3 +1,15 @@
+/*
+
+  #####  ####### #######    #     #    #     #####  #     # ####### ######  
+ #     # #          #       #     #   # #   #     # #     # #       #     # 
+ #       #          #       #     #  #   #  #       #     # #       #     # 
+ #  #### #####      #       ####### #     #  #####  ####### #####   #     # 
+ #     # #          #       #     # #######       # #     # #       #     # 
+ #     # #          #       #     # #     # #     # #     # #       #     # 
+  #####  #######    #       #     # #     #  #####  #     # ####### ######  
+                                                                            
+*/
+
 function generate_hash(str) {
     var hash = 0,
     i, chr;
@@ -12,20 +24,19 @@ function generate_hash(str) {
 
 // Event listener to only run contained code when the page contents have loaded
 document.addEventListener('DOMContentLoaded', function() {
-    const valueSam = -71244912;  // Store the hashed value of the super secret code
-    const result_div = document.getElementById("hash_result");  // The text to update when a result is found
+    const pass_value = -71244912;  // Store the hashed value of the super secret code
 
     // Get the hashing form from DOM, and create an event listener for its submission
-    document.getElementById("hashing_form").addEventListener("submit", function(event) {
+    document.getElementById("password_form").addEventListener("submit", function(event) {
         console.log("Submission!");
         event.preventDefault();
         var hashed_input = generate_hash(document.getElementById("inp_box").value);  // Get the hashed value of the input
-        if (hashed_input === valueSam) {  // Check if the input equals the correct password
-            result_div.innerText = "Valid!";
-            console.log("Valid input");
+        if (hashed_input === pass_value) {  // Check if the input equals the correct password
+            console.log("Valid input, switching to homepage");
+            window.location = "Behind the veil/homepage.html";
         } else {
-            result_div.innerText = "Nuh uh!";
             console.log("Invalid input");
+            alert("Incorrect Password! Try again...");
         }
     });
 });
