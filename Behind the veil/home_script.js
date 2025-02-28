@@ -10,11 +10,17 @@ document.addEventListener("DOMContentLoaded", function() {
     maths_current_time.innerText = "Time studied this week: " + time;
 
     // Listen for the button press
-    document.addEventListener("click", function() {
+    maths_button.addEventListener("click", function() {
         console.log("Maths button pressed");
         
         // Toggle the running variable
-        if (running) {running = false;}
-        else {running = true;};
+        if (running) {
+            running = false;
+            maths_button.innerText = "Start timer";
+        }
+        else {
+            running = true;
+            maths_button.innerText = "Stop timer";
+        };
     });
 });
